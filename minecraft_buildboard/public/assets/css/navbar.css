@@ -1,0 +1,85 @@
+@import url('https://fonts.cdnfonts.com/css/minecraft-4');
+
+.welcome-navbar {
+    width: 100%;
+    background-color: #282424;
+    padding: 15px;
+    position: fixed;
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    display: flex; /* Use Flexbox */
+    align-items: center; /* Vertically align the content */
+    justify-content: space-around;
+    opacity: 0.90;
+}
+
+.navbar-logo {
+    width: 250px;   /* Adjust logo size */
+    height: auto;
+}
+
+
+/* Navigation container */
+.nav-logo-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* Navigation list */
+.nav-buttons-container {
+    display: flex;
+    gap: 20px;               /* Space between items */
+    list-style: none;        /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+}
+
+/* Individual navigation item */
+.login-button {
+    display: inline-block;
+    background-color: #171615;
+    text-decoration: none;
+    color: white;
+    font-family: 'Minecraft', sans-serif;
+    font-size: 18px;
+    padding: 15px 35px 17px;
+    border-radius: 5px;
+
+    border: 0;
+
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for links */
+.login-button:hover {
+    background-color: #333;
+}
+
+.register-button {
+    display: inline-block;
+    background-color: #3c8527;
+    text-decoration: none;
+    color: white;
+    font-family: 'Minecraft', sans-serif;
+    font-size: 19px;
+    width: 190px;
+    height: 50px;
+    padding-bottom: 5px;
+    margin-left: 20px;
+    border: 0;
+    border-top: 5px solid #52a535;
+    border-bottom: 5px solid #2a641c;
+
+
+    transition: background-color 0.15s ease,
+                font-size 0.15s ease;
+}
+
+/* Hover effect for links */
+.register-button:hover {
+    background-color: #367723;
+    border-top: 5px solid #52a535;
+    border-bottom: 5px solid #2a641c;
+    font-size: 20px;
+
+}

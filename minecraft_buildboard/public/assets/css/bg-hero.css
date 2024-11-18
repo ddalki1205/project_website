@@ -1,0 +1,133 @@
+/* Body */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    overflow: visible;
+}
+
+.parallax-images-wrapper {
+    min-height: 100vh;  
+    max-height: 100vh;  
+    overflow: hidden;   
+    background-color: black;
+}
+
+/* Parallax Container */
+.parallax-container {
+    position: relative;
+    width: 100%; 
+    max-width: 3500px; 
+    margin: 0 auto; 
+    height: 150vh;
+    overflow: hidden;
+}
+
+.parallax-container img {
+    width: 100%;          /* Make the image responsive */
+    height: auto;         /* Maintain the aspect ratio */
+    max-width: 100%;      /* Ensure the image doesn't exceed the container's width */
+    max-height: 100%;     /* Prevent stretching when zoomed out */
+    object-fit: cover;
+}
+
+/* Parallax Layers */
+.parallax-layers {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* General Parallax Image */
+.parallax-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Layer: Sky */
+.layer-sky {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.sky-background,
+.sky-details {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/* Layer: Background */
+.layer-background {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+}
+
+.background-main {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/* Layer: Focus */
+.layer-focus {
+    position: absolute;
+    top: 33%;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+}
+
+.focus-main {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/* Foreground */
+.layer-foreground {
+    position: absolute;
+    top: 90%;
+    left: 0;
+    z-index: 6;
+    width: 100%;
+    height: 100%;
+}
+
+.foreground-main {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/* Parallax Effect (Optional for Animations) */
+.parallax-effect {
+    position: absolute;
+    transform: translateY(0);
+    transition: transform 0.2s ease-out;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .parallax-container {
+        height: 75vh; /* Reduce height for smaller devices */
+    }
+}
+
+@media (min-width: 1200px) {
+    .parallax-container {
+        height: 100vh; /* Full height for larger screens */
+    }
+}

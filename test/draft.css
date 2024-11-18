@@ -1,0 +1,240 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black; /* Set the background color to black */
+    color: white;
+}
+
+.parallax-images-wrapper {
+    min-height: 100vh;  /* Minimum height of the wrapper */
+    max-height: 100vw;  /* Maximum height of the wrapper */
+    overflow: hidden;   /* Hide overflow content */
+    background-color: #000000;  /* Optional background */
+}
+
+.parallax-image-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;  
+    height: auto;  
+}
+
+.parallax-image {
+    position: relative;
+    height: 500px; /* Adjust to your desired height */
+    width: 100%;
+    background-attachment: fixed; /* Key for parallax effect */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0; /* Removes unwanted spacing between divs */
+  }
+
+.sky, .clouds, .bg-near, .focus-cherry, .foreground {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    min-width: 100%;
+    min-height: 50%;
+    object-fit: cover;
+}
+
+.sky {
+    top: 0px;
+    z-index: 1; /* Set sky behind */
+}
+
+.clouds {
+    top: 0px;
+    z-index: 2; /* Clouds above sky */
+}
+
+.bg-near {
+    top: 33%;
+    min-height: 10vh;
+    z-index: 3; /* bg-near above clouds */
+}
+
+.focus-cherry {
+    top: 36%;
+    z-index: 4; /* focus-cherry above bg-near */
+}
+
+.foreground {
+    top: 99%;
+    z-index: 5; /* foreground above others */
+}
+
+.buildboard-logo {
+    position: absolute;
+    top: 24%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9;
+    width: 45vw; /* Set a specific width for the logo */
+    height: auto;
+}
+
+/* Hide images when scrolling past front page */
+.hide-on-scroll {
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+
+.hide-on-scroll.hidden {
+    opacity: 0;
+}
+
+/* Parallax effect styles (optional for parallax-style effect) */
+.parallax-effect {
+    transform: translateY(0);
+    transition: transform 0 ease-out;
+}
+
+.parallax-effect.scroll-up {
+    transform: translateY(-15%);
+}
+
+.parallax-effect.scroll-down {
+    transform: translateY(15%);
+}
+
+
+
+/* Parent Container: Responsive to Zoom */
+.parallax-container {
+    position: relative;
+    width: 100%; /* 80% of the parent container */
+    max-width: 3500px; /* Prevent it from growing too large */
+    margin: 0 auto;
+    height: 100vh; /* Full height of the viewport */
+    overflow: hidden; /* Prevent layers from overflowing */
+    height: calc(100vh - 100px);
+}
+
+/* Inside Layers Adjust Automatically */
+.MC_Hero_ParallaxC_Layers img {
+    width: 100%; /* Make all images scale proportionally */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+.parallax-effect {
+    position: absolute;
+    transform: translateY(0);
+    transition: transform 0.2s ease-out;
+}
+
+/* Scaling Behavior for Smaller Screens */
+@media (max-width: 768px) {
+    .parallax-container {
+        height: 75vh; /* Slightly reduce height for smaller devices */
+    }
+}
+
+/* Scaling Behavior for Larger Screens */
+@media (min-width: 1200px) {
+    .parallax-container {
+        height: 100vh; /* Full viewport height for large screens */
+    }
+}
+
+/* Responsive Design 
+@media (min-width: 3440px) {
+    .MC_Hero_ParallaxC_img {
+        object-fit: cover;
+    }
+}
+*/
+
+
+/* General Styles */
+.MC_Hero_ParallaxC_Layers {
+    position: relative;
+    width: 100vw;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+}
+
+.MC_Hero_ParallaxC_img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Layer: Sky */
+.MC_Hero_ParallaxC_Layers_sky {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.MC_Hero_ParallaxC_sky_background,
+.MC_Hero_ParallaxC_Layers_sky_details {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/* Layer: Background */
+.MC_Hero_ParallaxC_Layers_background {
+    position: absolute;
+    top: 18%;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+}
+
+.MC_Hero_ParallaxC_Layers_background_main {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/* Layer: Focus */
+.MC_Hero_ParallaxC_Layers_focus {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+}
+
+.MC_Hero_ParallaxC_Layers_focus_main {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+
+.MC_Animations_Layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+
+/* Foreground */
+.MC_Hero_ParallaxC_Layers_foreground {
+    position: absolute;
+    top: 70%;
+    left: 0;
+    z-index: 6;
+    width: 100%;
+    height: 100%;
+}
+
+.MC_Hero_ParallaxC_Layers_foreground_main {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}

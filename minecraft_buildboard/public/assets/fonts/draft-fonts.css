@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'Cellar';
+    src: url('fonts/cellar.ttf') format('truetype'); 
+}
+
+@font-face {
+    font-family: 'Pixies';
+    src: url('fonts/pixies.ttf') format('truetype'); 
+}
+
+@font-face {
+    font-family: 'MC Ten Lowercase Alt';
+    src: url('fonts/mc-ten-lowercase-alt.ttf') format('truetype'); 
+}
+
+/* Example */
+body {
+    font-family: 'Cellar', sans-serif;
+}
