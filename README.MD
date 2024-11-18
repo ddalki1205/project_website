@@ -1,14 +1,8 @@
-## READ ME
+## Mincraft BuildBoard (social media type of Website)
 
-
-## UPDATES MADE
-  
-
-## FUNCTIONALITIES
-
-
-## TO ADD/FIX
-
+# A project on full stack web development
+- Using html, css, js, php, xampp
+- A website where you can build and craft a board (share pictures/screenshots of your gameplay or builds in minecraft) to share to everyone in our Minecraft community.
 
 
 ```
